@@ -7,11 +7,7 @@
 
 <title>Mosaico Copacabana</title>
 
-<!-- FONTE PROFISSIONAL -->
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<!-- ICONES -->
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -52,8 +48,6 @@ margin:0;
 font-size:48px;
 }
 
-/* SECTIONS */
-
 section{
 background:white;
 max-width:1000px;
@@ -65,8 +59,6 @@ border-radius:8px;
 h2{
 color:#7a0c1c;
 }
-
-/* FEATURES */
 
 .features{
 display:flex;
@@ -94,8 +86,6 @@ font-size:28px;
 color:#7a0c1c;
 }
 
-/* SALAS */
-
 .flex{
 display:flex;
 flex-wrap:wrap;
@@ -106,8 +96,6 @@ justify-content:center;
 .flex img{
 border-radius:8px;
 }
-
-/* LOCAL */
 
 .row{
 display:flex;
@@ -127,8 +115,6 @@ border:0;
 border-radius:8px;
 }
 
-/* BOTAO */
-
 .button{
 background:#222;
 color:white;
@@ -136,10 +122,17 @@ padding:15px 25px;
 text-decoration:none;
 border-radius:6px;
 display:inline-block;
-margin-top:10px;
+margin:10px;
 }
 
-/* CONTATO */
+/* BOTÕES LADO A LADO */
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
 
 .contact{
 max-width:1000px;
@@ -149,16 +142,12 @@ color:white;
 text-align:center;
 }
 
-/* FOOTER */
-
 footer{
 background:#7a0c1c;
 color:white;
 text-align:center;
 padding:30px;
 }
-
-/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -180,18 +169,13 @@ text-decoration:none;
 <div class="page">
 
 <header>
-
 <img src="logo.png">
-
 </header>
 
 
 <div class="hero">
-
 <h1>Mosaico</h1>
-
 <p>Espaço para Cursos • Cozinha • Criação de Conteúdo</p>
-
 </div>
 
 
@@ -201,42 +185,35 @@ text-decoration:none;
 
 <div class="features">
 
-
 <div class="feature">
 <div class="circle"><i class="fa-solid fa-chalkboard-user"></i></div>
 <p>Cursos presenciais</p>
 </div>
-
 
 <div class="feature">
 <div class="circle"><i class="fa-solid fa-people-group"></i></div>
 <p>Workshops práticos</p>
 </div>
 
-
 <div class="feature">
 <div class="circle"><i class="fa-solid fa-utensils"></i></div>
 <p>Experiências gastronômicas</p>
 </div>
-
 
 <div class="feature">
 <div class="circle"><i class="fa-solid fa-video"></i></div>
 <p>Gravação de aulas e conteúdos</p>
 </div>
 
-
 <div class="feature">
 <div class="circle"><i class="fa-solid fa-book"></i></div>
 <p>Eventos educacionais</p>
 </div>
 
-
 <div class="feature">
 <div class="circle"><i class="fa-solid fa-handshake"></i></div>
 <p>Encontros profissionais</p>
 </div>
-
 
 </div>
 
@@ -313,17 +290,19 @@ height="300">
 
 <p>Para maiores informações, entre em contato</p>
 
+<div class="buttons">
+
 <a class="button"
 href="https://wa.me/5521996784717">
-WhatsApp
+<i class="fa-brands fa-whatsapp"></i> WhatsApp
 </a>
-
-<br><br>
 
 <a class="button"
 href="https://www.instagram.com/mosaicopacabana/">
-Instagram
+<i class="fa-brands fa-instagram"></i> Instagram
 </a>
+
+</div>
 
 </div>
 
