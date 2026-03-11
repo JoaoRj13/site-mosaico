@@ -14,42 +14,69 @@ background:#7a0c1c;
 }
 
 .page{
-background:white;
 max-width:1100px;
 margin:auto;
-min-height:100vh;
+background:#7a0c1c;
+padding-bottom:40px;
 }
 
 header{
 text-align:center;
-padding:30px;
+padding:40px 0 10px 0;
 }
 
 header img{
-height:120px;
+height:150px;
 }
 
 .hero{
-padding:40px;
+background:#7a0c1c;
+color:white;
 text-align:center;
-background:#f5f5f5;
+padding:30px;
 }
 
 .hero h1{
-color:#b3122f;
-font-size:48px;
 margin:0;
+font-size:48px;
 }
 
 section{
-padding:50px 20px;
+background:white;
 max-width:1000px;
-margin:auto;
+margin:30px auto;
+padding:40px;
+border-radius:8px;
 }
 
 h2{
-color:#b3122f;
+color:#7a0c1c;
 }
+
+/* CIRCULOS */
+
+.features{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+}
+
+.feature{
+width:200px;
+text-align:center;
+}
+
+.circle{
+width:80px;
+height:80px;
+border-radius:50%;
+border:2px solid #7a0c1c;
+margin:auto;
+margin-bottom:10px;
+}
+
+/* SALAS */
 
 .flex{
 display:flex;
@@ -62,12 +89,14 @@ justify-content:center;
 border-radius:8px;
 }
 
+/* LOCAL */
+
 .row{
 display:flex;
 flex-wrap:wrap;
 gap:20px;
-align-items:center;
 justify-content:center;
+align-items:center;
 }
 
 .row img{
@@ -80,14 +109,18 @@ border:0;
 border-radius:8px;
 }
 
+/* CARDS */
+
 .card{
 background:#f3f3f3;
 padding:20px;
 border-radius:8px;
 }
 
+/* BOTAO */
+
 .button{
-background:#b3122f;
+background:#7a0c1c;
 color:white;
 padding:15px 25px;
 text-decoration:none;
@@ -96,12 +129,16 @@ display:inline-block;
 margin-top:10px;
 }
 
+/* FOOTER */
+
 footer{
 background:#7a0c1c;
 color:white;
 text-align:center;
 padding:30px;
 }
+
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -134,6 +171,47 @@ text-decoration:none;
 
 <section>
 
+<h2>Como usar o espaço</h2>
+
+<div class="features">
+
+<div class="feature">
+<div class="circle"></div>
+<p>Cursos presenciais</p>
+</div>
+
+<div class="feature">
+<div class="circle"></div>
+<p>Workshops práticos</p>
+</div>
+
+<div class="feature">
+<div class="circle"></div>
+<p>Experiências gastronômicas</p>
+</div>
+
+<div class="feature">
+<div class="circle"></div>
+<p>Gravação de aulas e conteúdos</p>
+</div>
+
+<div class="feature">
+<div class="circle"></div>
+<p>Eventos educacionais</p>
+</div>
+
+<div class="feature">
+<div class="circle"></div>
+<p>Encontros profissionais</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
 <h2>Salas</h2>
 
 <div class="flex">
@@ -145,7 +223,6 @@ text-decoration:none;
 </div>
 
 </section>
-
 
 
 <section>
@@ -173,7 +250,6 @@ compartilha conhecimento.
 </section>
 
 
-
 <section>
 
 <h2>Localização</h2>
@@ -193,7 +269,6 @@ height="300">
 </section>
 
 
-
 <section>
 
 <h2>O que oferecemos</h2>
@@ -208,7 +283,6 @@ height="300">
 </div>
 
 </section>
-
 
 
 <section>
