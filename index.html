@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Mosaico Copacabana</title>
+
+<!-- FONTE PROFISSIONAL -->
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- ICONES -->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
 body{
 margin:0;
-font-family:Arial;
+font-family:'Poppins', sans-serif;
 background:#7a0c1c;
 }
 
@@ -28,8 +39,6 @@ padding:40px 0 10px 0;
 header img{
 height:170px;
 }
-
-/* HERO */
 
 .hero{
 background:#7a0c1c;
@@ -57,7 +66,7 @@ h2{
 color:#7a0c1c;
 }
 
-/* CIRCULOS */
+/* FEATURES */
 
 .features{
 display:flex;
@@ -72,12 +81,17 @@ text-align:center;
 }
 
 .circle{
-width:80px;
-height:80px;
+width:90px;
+height:90px;
 border-radius:50%;
 border:2px solid #7a0c1c;
 margin:auto;
 margin-bottom:10px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+color:#7a0c1c;
 }
 
 /* SALAS */
@@ -113,15 +127,7 @@ border:0;
 border-radius:8px;
 }
 
-/* CARDS */
-
-.card{
-background:#f3f3f3;
-padding:20px;
-border-radius:8px;
-}
-
-/* BOTAO PADRÃO */
+/* BOTAO */
 
 .button{
 background:#222;
@@ -133,7 +139,7 @@ display:inline-block;
 margin-top:10px;
 }
 
-/* CONTATO SEM FUNDO BRANCO */
+/* CONTATO */
 
 .contact{
 max-width:1000px;
@@ -174,12 +180,18 @@ text-decoration:none;
 <div class="page">
 
 <header>
+
 <img src="logo.png">
+
 </header>
 
+
 <div class="hero">
+
 <h1>Mosaico</h1>
+
 <p>Espaço para Cursos • Cozinha • Criação de Conteúdo</p>
+
 </div>
 
 
@@ -189,35 +201,42 @@ text-decoration:none;
 
 <div class="features">
 
+
 <div class="feature">
-<div class="circle"></div>
+<div class="circle"><i class="fa-solid fa-chalkboard-user"></i></div>
 <p>Cursos presenciais</p>
 </div>
 
+
 <div class="feature">
-<div class="circle"></div>
+<div class="circle"><i class="fa-solid fa-people-group"></i></div>
 <p>Workshops práticos</p>
 </div>
 
+
 <div class="feature">
-<div class="circle"></div>
+<div class="circle"><i class="fa-solid fa-utensils"></i></div>
 <p>Experiências gastronômicas</p>
 </div>
 
+
 <div class="feature">
-<div class="circle"></div>
+<div class="circle"><i class="fa-solid fa-video"></i></div>
 <p>Gravação de aulas e conteúdos</p>
 </div>
 
+
 <div class="feature">
-<div class="circle"></div>
+<div class="circle"><i class="fa-solid fa-book"></i></div>
 <p>Eventos educacionais</p>
 </div>
 
+
 <div class="feature">
-<div class="circle"></div>
+<div class="circle"><i class="fa-solid fa-handshake"></i></div>
 <p>Encontros profissionais</p>
 </div>
+
 
 </div>
 
@@ -292,9 +311,7 @@ height="300">
 
 <h2>Contato</h2>
 
-<p>
-Para maiores informações, entre em contato pelo WhatsApp
-</p>
+<p>Para maiores informações, entre em contato</p>
 
 <a class="button"
 href="https://wa.me/5521996784717">
@@ -322,7 +339,7 @@ Mosaico Copacabana
 
 <a class="whatsapp"
 href="https://wa.me/5521996784717">
-W
+<i class="fa-brands fa-whatsapp"></i>
 </a>
 
 </body>
