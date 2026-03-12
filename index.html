@@ -19,15 +19,16 @@ color:white;
 scroll-behavior:smooth;
 }
 
-/* MENU */
+/* MENU TRANSPARENTE */
 
 .menu{
 position:fixed;
 top:0;
 width:100%;
-background:#5a0814;
-padding:10px;
+padding:15px;
 text-align:center;
+background:rgba(0,0,0,0.3);
+backdrop-filter:blur(6px);
 z-index:1000;
 }
 
@@ -41,22 +42,47 @@ font-weight:600;
 /* TOPO */
 
 .topo{
-background:#7a0c1c;
-text-align:center;
-padding-top:100px;
+padding-top:120px;
 padding-bottom:60px;
+text-align:center;
 }
 
 .logo{
 width:180px;
 }
 
-/* BLOCO */
+/* BLOCO COWORKING */
 
 .bloco{
-background:#5a0814;
+display:flex;
+flex-wrap:wrap;
+gap:30px;
 padding:40px;
-text-align:center;
+justify-content:center;
+align-items:center;
+}
+
+/* FOTO GRANDE */
+
+.fotoEntrada{
+width:450px;
+max-width:100%;
+border-radius:12px;
+}
+
+/* MAPA */
+
+.mapa{
+width:450px;
+max-width:100%;
+border-radius:12px;
+overflow:hidden;
+}
+
+/* TEXTO */
+
+.texto{
+max-width:400px;
 }
 
 /* SALAS */
@@ -74,8 +100,8 @@ gap:20px;
 }
 
 .galeria img{
-width:300px;
-border-radius:10px;
+width:320px;
+border-radius:12px;
 transition:0.3s;
 }
 
@@ -86,9 +112,8 @@ transform:scale(1.05);
 /* CONTATO */
 
 .contato{
-background:#5a0814;
-padding:40px;
 text-align:center;
+padding:30px;
 }
 
 .botoes{
@@ -101,13 +126,13 @@ margin-top:20px;
 .botao{
 background:white;
 color:#7a0c1c;
-padding:10px 20px;
+padding:12px 25px;
 border-radius:8px;
 text-decoration:none;
 font-weight:600;
 }
 
-/* WHATS FLUTUANTE */
+/* WHATS */
 
 .whats{
 position:fixed;
@@ -121,33 +146,17 @@ text-decoration:none;
 font-size:20px;
 }
 
-/* ANIMAÇÃO */
-
-.animar{
-opacity:1;
-transform:translateY(0);
-transition:1s;
-}
-
-.animar.esconder{
-opacity:0;
-transform:translateY(40px);
-}
-
 /* RESPONSIVO */
 
-@media(max-width:700px){
+@media(max-width:900px){
 
-.galeria img{
-width:90%;
-}
-
-.botoes{
+.bloco{
 flex-direction:column;
 }
 
-.logo{
-width:140px;
+.fotoEntrada,
+.mapa{
+width:100%;
 }
 
 }
@@ -156,7 +165,6 @@ width:140px;
 
 </head>
 <body>
-
 
 
 <div class="menu">
@@ -182,31 +190,36 @@ Espaço para cursos, reuniões e cozinha profissional
 
 
 
-<div class="bloco animar">
+<!-- BLOCO COM FOTO + MAPA -->
 
-<h2>Nosso espaço</h2>
+<div class="bloco">
 
-<p>
+<img src="entrada_predio.jpg" class="fotoEntrada">
 
-Cursos presenciais • Workshops • Experiências gastronômicas •  
-Gravações • Eventos • Encontros profissionais
+<div class="mapa">
 
-</p>
+<iframe
+src="https://www.google.com/maps?q=Rua%20Nossa%20Senhora%20de%20Copacabana%20690&output=embed"
+width="100%"
+height="300"
+style="border:0"
+loading="lazy">
+</iframe>
 
-<img src="entrada_predio.jpg" width="300">
+</div>
 
 </div>
 
 
 
-<div class="salas animar" id="salas">
+<!-- SALAS -->
+
+<div class="salas" id="salas">
 
 <h2>Salas</h2>
 
 <p>
-
 Salas para cursos com capacidade de 10 a 15 pessoas
-
 </p>
 
 <div class="galeria">
@@ -221,25 +234,15 @@ Salas para cursos com capacidade de 10 a 15 pessoas
 
 
 
-<div class="contato animar" id="contato">
+<!-- CONTATO EMBAIXO -->
+
+<div class="contato" id="contato">
 
 <h2>Contato</h2>
 
 <p>
-
 Nossa Senhora de Copacabana 690, cobertura
-
 </p>
-
-
-<iframe
-src="https://www.google.com/maps?q=Rua%20Nossa%20Senhora%20de%20Copacabana%20690&output=embed"
-width="100%"
-height="300"
-style="border:0;margin-top:20px;border-radius:10px;"
-loading="lazy">
-</iframe>
-
 
 <div class="botoes">
 
@@ -260,33 +263,6 @@ Instagram
 <a class="whats" href="https://wa.me/5521999999999">
 W
 </a>
-
-
-
-<script>
-
-const itens = document.querySelectorAll(".animar")
-
-itens.forEach(el=>{
-el.classList.add("esconder")
-})
-
-window.addEventListener("scroll", () => {
-
-itens.forEach(el => {
-
-const top = el.getBoundingClientRect().top
-
-if(top < window.innerHeight - 50){
-el.classList.remove("esconder")
-}
-
-})
-
-})
-
-</script>
-
 
 
 </body>
