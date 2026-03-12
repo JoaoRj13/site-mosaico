@@ -7,211 +7,156 @@
 <style>
 
 body{
-margin:0;
-font-family:Arial;
-background:#f5f5f5;
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* MENU */
 
 .menu{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:center;
-gap:40px;
-background:rgba(0,0,0,0.4);
-padding:15px;
-z-index:1000;
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(0,0,0,0.7);
+    padding:15px;
+    text-align:center;
+    z-index:10;
 }
 
 .menu a{
-color:white;
-text-decoration:none;
-font-size:18px;
+    color:white;
+    margin:15px;
+    text-decoration:none;
+    font-size:18px;
 }
 
-/* HERO */
+/* IMAGEM TOPO */
 
 .hero{
-height:70vh;
-background:url("Arte 03.png") center/cover no-repeat;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-color:white;
-text-align:center;
-position:relative;
+    width:100%;
+    height:350px;
+    overflow:hidden;
+    margin-top:50px;
 }
 
+.hero img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+/* LOGO */
+
 .logo-topo{
-position:absolute;
-top:20px;
-left:50%;
-transform:translateX(-50%);
+    text-align:center;
+    margin-top:20px;
 }
 
 .logo-topo img{
-width:120px;
-}
-
-.hero h1{
-font-size:50px;
-margin:10px;
-}
-
-.hero p{
-font-size:20px;
-}
-
-/* SEÇÕES */
-
-.section{
-padding:60px;
-text-align:center;
+    width:150px;
 }
 
 /* SALAS */
 
-.galeria{
-display:flex;
-gap:20px;
-justify-content:center;
-flex-wrap:wrap;
+.salas{
+    text-align:center;
+    padding:40px;
 }
 
-.galeria img{
-width:300px;
-border-radius:10px;
-}
-
-/* ENTRADA + MAPA */
-
-.lado{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-padding:40px;
-}
-
-.lado img{
-width:500px;
-max-width:100%;
-border-radius:10px;
-}
-
-iframe{
-width:500px;
-height:350px;
-border:0;
+.salas img{
+    width:250px;
+    margin:10px;
+    border-radius:10px;
 }
 
 /* CONTATO */
 
 .contato{
-background:#8b0000;
-color:white;
-padding:40px;
-text-align:center;
+    background:#700000;
+    color:white;
+    padding:30px;
+    text-align:center;
 }
 
-/* BOTÃO WHATS */
+/* WHATSAPP */
 
 .whats{
-position:fixed;
-bottom:20px;
-right:20px;
+    position:fixed;
+    bottom:20px;
+    right:20px;
 }
 
 .whats img{
-width:60px;
+    width:60px;
 }
 
 </style>
-</head>
 
+</head>
 <body>
 
+
+<!-- MENU -->
+
 <div class="menu">
-<a href="index.html">Home</a>
-<a href="quem-somos.html">Quem somos</a>
-<a href="#contato">Contato</a>
+    <a href="index.html">Home</a>
+    <a href="quem-somos.html">Quem somos</a>
+    <a href="#contato">Contato</a>
 </div>
 
+
+<!-- IMAGEM TOPO -->
 
 <div class="hero">
+    <img src="entrada_predio.jpg">
+</div>
+
+
+<!-- LOGO -->
 
 <div class="logo-topo">
-<img src="logo.png">
-</div>
-
-<h1>Mosaico</h1>
-
-<p>
-Espaço para cursos, reuniões e cozinha profissional
-</p>
-
+    <img src="logo.png">
 </div>
 
 
-<div class="section">
+<!-- SALAS -->
 
-<h2>Salas</h2>
+<div class="salas">
 
-<p>
-Salas para cursos com capacidade de 10 a 15 pessoas
-</p>
+    <h2>Salas</h2>
 
-<div class="galeria">
+    <p>Salas para cursos com capacidade de 10 a 15 pessoas</p>
 
-<img src="sala1.jpg">
-<img src="sala2.jpg">
-<img src="sala3.jpg">
-
-</div>
+    <img src="sala1.jpg">
+    <img src="sala2.jpg">
+    <img src="sala3.jpg">
 
 </div>
 
 
-<div class="lado">
+<!-- CONTATO -->
 
-<img src="entrada_predio.jpg">
+<div id="contato" class="contato">
 
-<iframe
-src="https://www.google.com/maps?q=Avenida%20Nossa%20Senhora%20de%20Copacabana%20690&output=embed">
-</iframe>
+    <h2>Contato</h2>
+
+    📍 Avenida Nossa Senhora de Copacabana 690  
+    <br><br>
+
+    📞 (21) 99678-4717
 
 </div>
 
 
-<div class="contato" id="contato">
+<!-- WHATSAPP -->
 
-<h2>Contato</h2>
+<a class="whats"
+href="https://wa.me/5521996784717"
+target="_blank">
 
-<p>
-Avenida Nossa Senhora de Copacabana 690 – Cobertura
-</p>
+    <img src="whatsapp.png">
 
-<p>
-Telefone: <a href="tel:+5521996784717" style="color:white;">
-(21) 99678-4717
 </a>
-</p>
-
-<br>
-
-<button>WhatsApp</button>
-<button>Instagram</button>
-
-</div>
-
-
-<div class="whats">
-<img src="whatsapp.png">
-</div>
 
 
 </body>
