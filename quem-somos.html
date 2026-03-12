@@ -2,21 +2,24 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Mosaico - Quem somos</title>
+<title>Quem somos</title>
 
 <style>
 
 body{
     margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background:#111;
-    color:white;
+    font-family:Arial;
+    background:black;
 }
+
 
 /* MENU */
 
 .menu{
-    background:rgba(0,0,0,0.7);
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#7a0000;
     padding:15px;
     text-align:center;
 }
@@ -28,66 +31,32 @@ body{
     font-size:18px;
 }
 
+
 /* LOGO */
 
-.logo-topo{
-    text-align:center;
-    margin-top:20px;
-}
-
-.logo-topo img{
-    width:150px;
-}
-
-/* CONTEUDO */
-
-.container{
-    max-width:900px;
-    margin:auto;
-    padding:20px;
-    text-align:center;
-}
-
-/* IMAGEM */
-
-.imagem-quem{
-    width:80%;
-    max-width:600px;
-    border-radius:10px;
-    margin:20px auto;
-    display:block;
-}
-
-/* TEXTO */
-
-h1{
-    color:#ff2a2a;
-}
-
-p{
-    font-size:18px;
-    line-height:1.6;
-}
-
-/* CONTATO */
-
-.contato{
-    margin-top:40px;
-    background:#700000;
-    padding:20px;
-    border-radius:10px;
-}
-
-/* WHATS */
-
-.whats{
+.logo{
     position:fixed;
-    bottom:20px;
-    right:20px;
+    top:5px;
+    left:10px;
 }
 
-.whats img{
-    width:60px;
+.logo img{
+    width:90px;
+}
+
+
+/* BLOCO CENTRAL */
+
+.box{
+    margin-top:120px;
+    display:flex;
+    justify-content:center;
+}
+
+.box img{
+    width:900px;
+    max-width:95%;
+    border-radius:20px;
 }
 
 </style>
@@ -95,57 +64,30 @@ p{
 </head>
 <body>
 
-<!-- MENU -->
+
 
 <div class="menu">
-    <a href="index.html">Home</a>
-    <a href="quem-somos.html">Quem somos</a>
-    <a href="index.html#contato">Contato</a>
-</div>
 
-<!-- LOGO -->
-
-<div class="logo-topo">
-    <img src="logo.png">
-</div>
-
-<!-- CONTEUDO -->
-
-<div class="container">
-
-    <h1>Quem somos</h1>
-
-    <img src="quem.png" class="imagem-quem">
-
-    <p>
-    A Mosaico é um espaço criado para transformar conhecimento em experiências reais.
-    Localizada em Copacabana, oferecemos uma estrutura profissional pensada para cursos presenciais,
-    workshops, produção de conteúdo e experiências gastronômicas.
-    </p>
-
-    <p>
-    Mais do que salas, a Mosaico é um ambiente preparado para quem ensina,
-    cria e compartilha conhecimento.
-    </p>
-
-    <div class="contato">
-
-        <h2>Contato</h2>
-
-        📍 Avenida Nossa Senhora de Copacabana 690<br><br>
-
-        📞 (21) 99678-4717
-
-    </div>
+<a href="index.html">Home</a>
+<a href="quem-somos.html">Quem somos</a>
+<a href="index.html#contato">Contato</a>
 
 </div>
 
 
-<!-- WHATS -->
 
-<a class="whats" href="https://wa.me/5521996784717">
-    <img src="whatsapp.png">
-</a>
+<div class="logo">
+<img src="logo.png">
+</div>
+
+
+
+<div class="box">
+
+<img src="quem.png">
+
+</div>
+
 
 
 </body>
