@@ -19,7 +19,7 @@ color:white;
 scroll-behavior:smooth;
 }
 
-/* MENU FIXO */
+/* MENU */
 
 .menu{
 position:fixed;
@@ -38,7 +38,7 @@ text-decoration:none;
 font-weight:600;
 }
 
-/* HEADER */
+/* TOPO */
 
 .topo{
 background:#7a0c1c;
@@ -49,28 +49,14 @@ padding-bottom:60px;
 
 .logo{
 width:180px;
-margin-bottom:10px;
 }
 
-.frase{
-font-size:22px;
-margin-top:10px;
-}
-
-/* BLOCO VINHO ESCURO */
+/* BLOCO */
 
 .bloco{
 background:#5a0814;
 padding:40px;
 text-align:center;
-}
-
-/* ENTRADA */
-
-.entrada img{
-width:300px;
-border-radius:10px;
-margin-top:20px;
 }
 
 /* SALAS */
@@ -90,7 +76,6 @@ gap:20px;
 .galeria img{
 width:300px;
 border-radius:10px;
-cursor:pointer;
 transition:0.3s;
 }
 
@@ -122,7 +107,7 @@ text-decoration:none;
 font-weight:600;
 }
 
-/* BOTÃO FLUTUANTE */
+/* WHATS FLUTUANTE */
 
 .whats{
 position:fixed;
@@ -132,21 +117,21 @@ background:#25d366;
 color:white;
 padding:15px;
 border-radius:50%;
-font-size:20px;
 text-decoration:none;
+font-size:20px;
 }
 
 /* ANIMAÇÃO */
 
 .animar{
-opacity:0;
-transform:translateY(40px);
+opacity:1;
+transform:translateY(0);
 transition:1s;
 }
 
-.animar.mostrar{
-opacity:1;
-transform:translateY(0);
+.animar.esconder{
+opacity:0;
+transform:translateY(40px);
 }
 
 /* RESPONSIVO */
@@ -173,6 +158,7 @@ width:140px;
 <body>
 
 
+
 <div class="menu">
 
 <a href="#salas">Salas</a>
@@ -181,31 +167,36 @@ width:140px;
 </div>
 
 
-<div class="topo animar">
+
+<div class="topo">
 
 <img src="logo.png" class="logo">
 
 <h1>Mosaico</h1>
 
-<p class="frase">
+<p>
 Espaço para cursos, reuniões e cozinha profissional
 </p>
 
 </div>
 
 
-<div class="bloco entrada animar">
+
+<div class="bloco animar">
 
 <h2>Nosso espaço</h2>
 
 <p>
-Cursos presenciais • Workshops • Experiências gastronômicas •
+
+Cursos presenciais • Workshops • Experiências gastronômicas •  
 Gravações • Eventos • Encontros profissionais
+
 </p>
 
-<img src="entrada_predio.jpg">
+<img src="entrada_predio.jpg" width="300">
 
 </div>
+
 
 
 <div class="salas animar" id="salas">
@@ -213,7 +204,9 @@ Gravações • Eventos • Encontros profissionais
 <h2>Salas</h2>
 
 <p>
+
 Salas para cursos com capacidade de 10 a 15 pessoas
+
 </p>
 
 <div class="galeria">
@@ -227,13 +220,26 @@ Salas para cursos com capacidade de 10 a 15 pessoas
 </div>
 
 
+
 <div class="contato animar" id="contato">
 
 <h2>Contato</h2>
 
 <p>
+
 Nossa Senhora de Copacabana 690, cobertura
+
 </p>
+
+
+<iframe
+src="https://www.google.com/maps?q=Rua%20Nossa%20Senhora%20de%20Copacabana%20690&output=embed"
+width="100%"
+height="300"
+style="border:0;margin-top:20px;border-radius:10px;"
+loading="lazy">
+</iframe>
+
 
 <div class="botoes">
 
@@ -250,14 +256,20 @@ Instagram
 </div>
 
 
+
 <a class="whats" href="https://wa.me/5521999999999">
 W
 </a>
 
 
+
 <script>
 
 const itens = document.querySelectorAll(".animar")
+
+itens.forEach(el=>{
+el.classList.add("esconder")
+})
 
 window.addEventListener("scroll", () => {
 
@@ -266,7 +278,7 @@ itens.forEach(el => {
 const top = el.getBoundingClientRect().top
 
 if(top < window.innerHeight - 50){
-el.classList.add("mostrar")
+el.classList.remove("esconder")
 }
 
 })
@@ -274,6 +286,7 @@ el.classList.add("mostrar")
 })
 
 </script>
+
 
 
 </body>
