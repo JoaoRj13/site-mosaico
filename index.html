@@ -35,7 +35,7 @@ font-size:18px;
 /* HERO */
 
 .hero{
-height:100vh;
+height:70vh;
 background:url("Arte 03.png") center/cover no-repeat;
 display:flex;
 flex-direction:column;
@@ -43,9 +43,17 @@ justify-content:center;
 align-items:center;
 color:white;
 text-align:center;
+position:relative;
 }
 
-.hero img{
+.logo-topo{
+position:absolute;
+top:20px;
+left:50%;
+transform:translateX(-50%);
+}
+
+.logo-topo img{
 width:120px;
 }
 
@@ -58,7 +66,7 @@ margin:10px;
 font-size:20px;
 }
 
-/* SEÇÃO */
+/* SEÇÕES */
 
 .section{
 padding:60px;
@@ -136,11 +144,15 @@ width:60px;
 
 <div class="hero">
 
+<div class="logo-topo">
 <img src="logo.png">
+</div>
 
 <h1>Mosaico</h1>
 
-<p>Espaço para cursos, reuniões e cozinha profissional</p>
+<p>
+Espaço para cursos, reuniões e cozinha profissional
+</p>
 
 </div>
 
@@ -149,7 +161,9 @@ width:60px;
 
 <h2>Salas</h2>
 
-<p>Salas para cursos com capacidade de 10 a 15 pessoas</p>
+<p>
+Salas para cursos com capacidade de 10 a 15 pessoas
+</p>
 
 <div class="galeria">
 
@@ -181,15 +195,16 @@ src="https://www.google.com/maps?q=Avenida%20Nossa%20Senhora%20de%20Copacabana%2
 Avenida Nossa Senhora de Copacabana 690 – Cobertura
 </p>
 
+<p>
+Telefone: <a href="tel:+5521996784717" style="color:white;">
+(21) 99678-4717
+</a>
+</p>
+
 <br>
 
-<a href="#">
 <button>WhatsApp</button>
-</a>
-
-<a href="#">
 <button>Instagram</button>
-</a>
 
 </div>
 
