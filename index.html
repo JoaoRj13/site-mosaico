@@ -19,7 +19,8 @@ color:white;
 scroll-behavior:smooth;
 }
 
-/* MENU TRANSPARENTE */
+
+/* MENU */
 
 .menu{
 position:fixed;
@@ -39,11 +40,12 @@ text-decoration:none;
 font-weight:600;
 }
 
+
 /* TOPO */
 
 .topo{
 padding-top:120px;
-padding-bottom:60px;
+padding-bottom:40px;
 text-align:center;
 }
 
@@ -51,39 +53,21 @@ text-align:center;
 width:180px;
 }
 
-/* BLOCO COWORKING */
 
-.bloco{
+/* BANNER */
+
+.banner{
 display:flex;
-flex-wrap:wrap;
-gap:30px;
-padding:40px;
 justify-content:center;
-align-items:center;
+margin-top:20px;
 }
 
-/* FOTO GRANDE */
-
-.fotoEntrada{
-width:450px;
-max-width:100%;
+.banner img{
+width:90%;
+max-width:900px;
 border-radius:12px;
 }
 
-/* MAPA */
-
-.mapa{
-width:450px;
-max-width:100%;
-border-radius:12px;
-overflow:hidden;
-}
-
-/* TEXTO */
-
-.texto{
-max-width:400px;
-}
 
 /* SALAS */
 
@@ -109,11 +93,37 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
+
+/* BLOCO ENTRADA + MAPA */
+
+.bloco{
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+padding:40px;
+justify-content:center;
+align-items:center;
+}
+
+.fotoEntrada{
+width:450px;
+max-width:100%;
+border-radius:12px;
+}
+
+.mapa{
+width:450px;
+max-width:100%;
+border-radius:12px;
+overflow:hidden;
+}
+
+
 /* CONTATO */
 
 .contato{
 text-align:center;
-padding:30px;
+padding:40px;
 }
 
 .botoes{
@@ -132,6 +142,7 @@ text-decoration:none;
 font-weight:600;
 }
 
+
 /* WHATS */
 
 .whats{
@@ -139,12 +150,19 @@ position:fixed;
 bottom:20px;
 right:20px;
 background:#25d366;
-color:white;
-padding:15px;
+width:60px;
+height:60px;
 border-radius:50%;
-text-decoration:none;
-font-size:20px;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
+
+.whats img{
+width:30px;
+}
+
 
 /* RESPONSIVO */
 
@@ -159,12 +177,17 @@ flex-direction:column;
 width:100%;
 }
 
+.galeria img{
+width:90%;
+}
+
 }
 
 </style>
 
 </head>
 <body>
+
 
 
 <div class="menu">
@@ -190,7 +213,42 @@ Espaço para cursos, reuniões e cozinha profissional
 
 
 
-<!-- BLOCO COM FOTO + MAPA -->
+<!-- ARTE 03 -->
+
+<div class="banner">
+
+<img src="Arte 03.png">
+
+</div>
+
+
+
+<!-- SALAS -->
+
+<div class="salas" id="salas">
+
+<h2>Salas</h2>
+
+<p>
+
+Salas para cursos com capacidade de 10 a 15 pessoas  
+Espaço para cursos, reuniões e cozinha profissional
+
+</p>
+
+<div class="galeria">
+
+<img src="sala1.jpg">
+<img src="sala2.jpg">
+<img src="sala3.jpg">
+
+</div>
+
+</div>
+
+
+
+<!-- FOTO ENTRADA + MAPA -->
 
 <div class="bloco">
 
@@ -212,29 +270,7 @@ loading="lazy">
 
 
 
-<!-- SALAS -->
-
-<div class="salas" id="salas">
-
-<h2>Salas</h2>
-
-<p>
-Salas para cursos com capacidade de 10 a 15 pessoas
-</p>
-
-<div class="galeria">
-
-<img src="sala1.jpg">
-<img src="sala2.jpg">
-<img src="sala3.jpg">
-
-</div>
-
-</div>
-
-
-
-<!-- CONTATO EMBAIXO -->
+<!-- CONTATO -->
 
 <div class="contato" id="contato">
 
@@ -260,9 +296,14 @@ Instagram
 
 
 
+<!-- BOTÃO WHATS -->
+
 <a class="whats" href="https://wa.me/5521999999999">
-W
+
+<img src="whatsapp.png">
+
 </a>
+
 
 
 </body>
