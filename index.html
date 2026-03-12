@@ -9,6 +9,7 @@
 body{
     margin:0;
     font-family:Arial;
+    background:#7a0000;
 }
 
 
@@ -18,7 +19,7 @@ body{
     position:fixed;
     top:0;
     width:100%;
-    background:rgba(120,0,0,0.8);
+    background:rgba(120,0,0,0.9);
     padding:15px;
     text-align:center;
     z-index:10;
@@ -32,31 +33,30 @@ body{
 }
 
 
+/* LOGO */
+
+.logo{
+    position:fixed;
+    top:5px;
+    left:10px;
+    z-index:20;
+}
+
+.logo img{
+    width:90px;
+}
+
+
 /* TOPO */
 
 .hero{
-    width:100%;
-    margin-top:60px;
     text-align:center;
+    margin-top:70px;
 }
 
 .hero img{
     width:100%;
-    max-width:1200px;
-}
-
-
-/* LOGO */
-
-.logo{
-    position:absolute;
-    top:70px;
-    left:50%;
-    transform:translateX(-50%);
-}
-
-.logo img{
-    width:120px;
+    max-width:850px;
 }
 
 
@@ -65,6 +65,7 @@ body{
 .salas{
     text-align:center;
     padding:40px;
+    background:white;
 }
 
 .salas img{
@@ -74,33 +75,41 @@ body{
 }
 
 
+/* LOCAL */
+
+.local{
+    text-align:center;
+    padding:40px;
+    background:white;
+}
+
+.local img{
+    width:300px;
+    margin:10px;
+}
+
+
 /* CONTATO */
 
 .contato{
-    background:#700000;
+    background:#7a0000;
     color:white;
     padding:30px;
     text-align:center;
 }
 
 
-/* MAPA */
+/* BOTOES FLUTUANTES */
 
-.mapa{
-    text-align:center;
-    margin:20px;
-}
-
-
-/* WHATS */
-
-.whats{
+.botoes{
     position:fixed;
     bottom:20px;
     right:20px;
+    display:flex;
+    gap:10px;
 }
 
-.whats img{
+.botoes img{
     width:60px;
 }
 
@@ -121,17 +130,15 @@ body{
 
 
 
-<div class="hero">
-
-<img src="Arte 03.png">
-
+<div class="logo">
+<img src="logo.png">
 </div>
 
 
 
-<div class="logo">
+<div class="hero">
 
-<img src="logo.png">
+<img src="Arte 03.png">
 
 </div>
 
@@ -151,20 +158,13 @@ body{
 
 
 
-<div id="contato" class="contato">
+<div class="local">
 
-<h2>Contato</h2>
+<h2>Localização</h2>
 
-📍 Avenida Nossa Senhora de Copacabana 690  
+<img src="entrada_predio.jpg">
+
 <br><br>
-
-📞 (21) 99678-4717
-
-</div>
-
-
-
-<div class="mapa">
 
 <iframe
 src="https://www.google.com/maps?q=Avenida%20Nossa%20Senhora%20de%20Copacabana%20690&output=embed"
@@ -177,14 +177,29 @@ style="border:0;">
 
 
 
-<a class="whats"
-href="https://wa.me/5521996784717"
-target="_blank">
+<div id="contato" class="contato">
 
+<h2>Contato</h2>
+
+📍 Avenida Nossa Senhora de Copacabana 690  
+<br>
+📞 (21) 99678-4717
+
+</div>
+
+
+
+<div class="botoes">
+
+<a href="https://wa.me/5521996784717" target="_blank">
 <img src="whatsapp.png">
-
 </a>
 
+<a href="https://www.instagram.com/mosaicopacabana/" target="_blank">
+<img src="instagram.png">
+</a>
+
+</div>
 
 
 </body>
