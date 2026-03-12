@@ -8,8 +8,9 @@
 
 body{
     margin:0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:Arial;
 }
+
 
 /* MENU */
 
@@ -17,7 +18,7 @@ body{
     position:fixed;
     top:0;
     width:100%;
-    background:rgba(0,0,0,0.6);
+    background:rgba(120,0,0,0.8);
     padding:15px;
     text-align:center;
     z-index:10;
@@ -31,31 +32,31 @@ body{
 }
 
 
-/* TOPO COM IMAGEM INTEIRA */
+/* TOPO */
 
 .hero{
     width:100%;
-    background:black;
+    margin-top:60px;
     text-align:center;
-    padding-top:60px;
 }
 
 .hero img{
     width:100%;
-    max-width:1000px;
-    height:auto;
+    max-width:1200px;
 }
 
 
 /* LOGO */
 
-.logo-topo{
-    text-align:center;
-    margin:20px;
+.logo{
+    position:absolute;
+    top:70px;
+    left:50%;
+    transform:translateX(-50%);
 }
 
-.logo-topo img{
-    width:150px;
+.logo img{
+    width:120px;
 }
 
 
@@ -83,7 +84,15 @@ body{
 }
 
 
-/* WHATSAPP */
+/* MAPA */
+
+.mapa{
+    text-align:center;
+    margin:20px;
+}
+
+
+/* WHATS */
 
 .whats{
     position:fixed;
@@ -92,7 +101,7 @@ body{
 }
 
 .whats img{
-    width:65px;
+    width:60px;
 }
 
 </style>
@@ -101,70 +110,72 @@ body{
 <body>
 
 
-<!-- MENU -->
 
 <div class="menu">
 
-    <a href="index.html">Home</a>
-    <a href="quem-somos.html">Quem somos</a>
-    <a href="#contato">Contato</a>
+<a href="index.html">Home</a>
+<a href="quem-somos.html">Quem somos</a>
+<a href="#contato">Contato</a>
 
 </div>
 
 
-
-<!-- IMAGEM TOPO -->
 
 <div class="hero">
 
-    <img src="Arte 03.png">
+<img src="Arte 03.png">
 
 </div>
 
 
 
-<!-- LOGO -->
+<div class="logo">
 
-<div class="logo-topo">
-
-    <img src="logo.png">
+<img src="logo.png">
 
 </div>
 
 
-
-<!-- SALAS -->
 
 <div class="salas">
 
-    <h2>Salas</h2>
+<h2>Salas</h2>
 
-    <p>Salas para cursos com capacidade de 10 a 15 pessoas</p>
+<p>Salas para cursos com capacidade de 10 a 15 pessoas</p>
 
-    <img src="sala1.jpg">
-    <img src="sala2.jpg">
-    <img src="sala3.jpg">
+<img src="sala1.jpg">
+<img src="sala2.jpg">
+<img src="sala3.jpg">
 
 </div>
 
 
-
-<!-- CONTATO -->
 
 <div id="contato" class="contato">
 
-    <h2>Contato</h2>
+<h2>Contato</h2>
 
-    📍 Avenida Nossa Senhora de Copacabana 690  
-    <br><br>
+📍 Avenida Nossa Senhora de Copacabana 690  
+<br><br>
 
-    📞 (21) 99678-4717
+📞 (21) 99678-4717
 
 </div>
 
 
 
-<!-- WHATSAPP -->
+<div class="mapa">
+
+<iframe
+src="https://www.google.com/maps?q=Avenida%20Nossa%20Senhora%20de%20Copacabana%20690&output=embed"
+width="90%"
+height="300"
+style="border:0;">
+</iframe>
+
+</div>
+
+
 
 <a class="whats"
 href="https://wa.me/5521996784717"
@@ -173,6 +184,7 @@ target="_blank">
 <img src="whatsapp.png">
 
 </a>
+
 
 
 </body>
