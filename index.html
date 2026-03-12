@@ -18,39 +18,52 @@ body{
 margin:0;
 font-family:'Poppins', sans-serif;
 background:#7a0c1c;
+scroll-behavior:smooth;
 }
-
-/* AREA CENTRAL MAIS ESCURA */
 
 .page{
 max-width:1100px;
 margin:auto;
 background:#5c0714;
-padding-bottom:40px;
+padding-top:80px;
+}
+
+/* MENU FIXO */
+
+.menu{
+position:fixed;
+top:0;
+width:100%;
+background:#7a0c1c;
+z-index:999;
+text-align:center;
+padding:10px;
+}
+
+.menu a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-weight:600;
 }
 
 /* HEADER */
 
 header{
 text-align:center;
-padding:40px 0 10px 0;
+padding:30px 0;
 }
 
 header img{
-height:180px;
+height:160px;
 }
 
 /* HERO */
 
 .hero{
-background:#5c0714;
 color:white;
 text-align:center;
-padding:10px 20px 30px 20px;
-}
-
-.hero p{
-font-size:18px;
+padding-bottom:20px;
 }
 
 /* SECTIONS */
@@ -61,6 +74,14 @@ max-width:1000px;
 margin:30px auto;
 padding:40px;
 border-radius:8px;
+opacity:0;
+transform:translateY(40px);
+transition:0.6s;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
 }
 
 h2{
@@ -95,40 +116,43 @@ font-size:24px;
 color:#7a0c1c;
 }
 
-/* SALAS */
+/* GALERIA */
 
-.flex{
+.gallery{
 display:flex;
 flex-wrap:wrap;
-gap:15px;
+gap:10px;
 justify-content:center;
 }
 
-.flex img{
+.gallery img{
+width:300px;
 border-radius:8px;
-max-width:100%;
-height:auto;
+cursor:pointer;
+transition:0.3s;
 }
 
-/* LOCAL */
+.gallery img:hover{
+transform:scale(1.05);
+}
 
-.row{
-display:flex;
-flex-wrap:wrap;
-gap:20px;
+/* MODAL */
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
 justify-content:center;
 align-items:center;
 }
 
-.row img{
-max-width:100%;
-border-radius:8px;
-}
-
-iframe{
-border:0;
-border-radius:8px;
-max-width:100%;
+.modal img{
+max-width:90%;
+max-height:90%;
 }
 
 /* BOTÕES */
@@ -139,37 +163,34 @@ color:white;
 padding:12px 20px;
 text-decoration:none;
 border-radius:6px;
-display:inline-block;
 margin:5px;
+display:inline-block;
 }
 
 .buttons{
 display:flex;
 justify-content:center;
-gap:15px;
+gap:10px;
 flex-wrap:wrap;
 }
 
 /* CONTATO */
 
 .contact{
-max-width:1000px;
-margin:30px auto;
-padding:40px;
 color:white;
 text-align:center;
+padding:40px;
 }
 
 /* FOOTER */
 
 footer{
-background:#5c0714;
 color:white;
 text-align:center;
 padding:30px;
 }
 
-/* WHATSAPP */
+/* WHATS */
 
 .whatsapp{
 position:fixed;
@@ -177,30 +198,14 @@ bottom:20px;
 right:20px;
 background:#25d366;
 color:white;
-padding:15px 18px;
+padding:15px;
 border-radius:50%;
-font-size:22px;
-text-decoration:none;
 }
 
-/* RESPONSIVO CELULAR */
+@media(max-width:700px){
 
-@media (max-width:700px){
-
-header img{
-height:120px;
-}
-
-.hero p{
-font-size:16px;
-}
-
-.feature{
-width:45%;
-}
-
-section{
-padding:20px;
+.gallery img{
+width:100%;
 }
 
 }
@@ -210,12 +215,22 @@ padding:20px;
 
 <body>
 
+<div class="menu">
+
+<a href="#home">Home</a>
+<a href="#salas">Salas</a>
+<a href="#sobre">Sobre</a>
+<a href="#local">Localização</a>
+<a href="#contato">Contato</a>
+
+</div>
+
+
 <div class="page">
 
-<header>
+<header id="home">
 <img src="logo.png">
 </header>
-
 
 <div class="hero">
 <p>Espaço para Cursos • Cozinha • Criação de Conteúdo</p>
@@ -235,27 +250,27 @@ padding:20px;
 
 <div class="feature">
 <div class="circle"><i class="fa-solid fa-people-group"></i></div>
-<p>Workshops práticos</p>
+<p>Workshops</p>
 </div>
 
 <div class="feature">
 <div class="circle"><i class="fa-solid fa-utensils"></i></div>
-<p>Experiências gastronômicas</p>
+<p>Gastronomia</p>
 </div>
 
 <div class="feature">
 <div class="circle"><i class="fa-solid fa-video"></i></div>
-<p>Gravação de conteúdos</p>
+<p>Gravações</p>
 </div>
 
 <div class="feature">
 <div class="circle"><i class="fa-solid fa-book"></i></div>
-<p>Eventos educacionais</p>
+<p>Eventos</p>
 </div>
 
 <div class="feature">
 <div class="circle"><i class="fa-solid fa-handshake"></i></div>
-<p>Encontros profissionais</p>
+<p>Encontros</p>
 </div>
 
 </div>
@@ -263,81 +278,66 @@ padding:20px;
 </section>
 
 
-<section>
+<section id="salas">
 
 <h2>Salas</h2>
 
-<div class="flex">
+<p>Salas para cursos com capacidade de 10 a 15 pessoas</p>
 
-<img src="sala1.jpg">
-<img src="sala2.jpg">
-<img src="sala3.jpg">
+<div class="gallery">
+
+<img src="sala1.jpg" onclick="openImg(this)">
+<img src="sala2.jpg" onclick="openImg(this)">
+<img src="sala3.jpg" onclick="openImg(this)">
 
 </div>
 
 </section>
 
 
-<section>
+<section id="sobre">
 
 <h2>Sobre o espaço</h2>
 
 <p>
 A Mosaico é um espaço criado para transformar conhecimento em experiências reais.
-</p>
-
-<p>
-Localizada em Copacabana, oferecemos estrutura profissional para cursos presenciais,
+Localizada em Copacabana, oferecemos estrutura profissional para cursos,
 workshops, produção de conteúdo e experiências gastronômicas.
-</p>
-
-<p>
-Mais do que salas, a Mosaico é um ambiente preparado para quem ensina,
-cria e compartilha conhecimento.
 </p>
 
 </section>
 
 
-<section>
+<section id="local">
 
 <h2>Localização</h2>
 
 <p>
-Nossa Senhora de Copacabana 690, cobertura – Copacabana – Rio de Janeiro
+Nossa Senhora de Copacabana 690, cobertura – Rio de Janeiro
 </p>
-
-<div class="row">
-
-<img src="entrada_predio.jpg">
 
 <iframe
 src="https://www.google.com/maps?q=Rua+Nossa+Senhora+de+Copacabana+690+Rio+de+Janeiro&output=embed"
-width="400"
-height="300">
+width="100%" height="300">
 </iframe>
-
-</div>
 
 </section>
 
 
-<div class="contact">
+<div id="contato" class="contact">
 
 <h2>Contato</h2>
-
-<p>Para maiores informações, entre em contato</p>
 
 <div class="buttons">
 
 <a class="button"
 href="https://wa.me/5521996784717">
-<i class="fa-brands fa-whatsapp"></i> WhatsApp
+WhatsApp
 </a>
 
 <a class="button"
 href="https://www.instagram.com/mosaicopacabana/">
-<i class="fa-brands fa-instagram"></i> Instagram
+Instagram
 </a>
 
 </div>
@@ -346,9 +346,16 @@ href="https://www.instagram.com/mosaicopacabana/">
 
 
 <footer>
+
 Mosaico Copacabana
+
 </footer>
 
+</div>
+
+
+<div class="modal" id="modal" onclick="closeImg()">
+<img id="modalImg">
 </div>
 
 
@@ -356,6 +363,40 @@ Mosaico Copacabana
 href="https://wa.me/5521996784717">
 <i class="fa-brands fa-whatsapp"></i>
 </a>
+
+
+<script>
+
+function openImg(img){
+document.getElementById("modal").style.display="flex"
+document.getElementById("modalImg").src=img.src
+}
+
+function closeImg(){
+document.getElementById("modal").style.display="none"
+}
+
+let sections=document.querySelectorAll("section")
+
+window.addEventListener("scroll",()=>{
+
+sections.forEach(sec=>{
+
+let top=window.scrollY
+
+let offset=sec.offsetTop-400
+
+if(top>offset){
+
+sec.classList.add("show")
+
+}
+
+})
+
+})
+
+</script>
 
 </body>
 </html>
