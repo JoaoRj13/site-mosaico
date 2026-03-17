@@ -48,34 +48,20 @@ color:white;
 margin:20px;
 text-decoration:none;
 font-size:18px;
-padding:5px;
-transition:0.3s;
-}
-
-.menu-links a:hover{
-border-bottom:2px solid white;
 }
 
 
-/* BANNER */
+/* TOPO */
 
-.banner{
-margin-top:80px;
-height:350px;
-background:#7a0000;
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
+.topo{
+margin-top:90px;
 text-align:center;
+padding:40px;
+background:white;
 }
 
-.banner h1{
-font-size:40px;
-}
-
-.banner p{
-font-size:18px;
+.topo h1{
+color:#7a0000;
 }
 
 
@@ -88,17 +74,12 @@ margin:40px 0;
 }
 
 
-/* ANIMAÇÃO */
+/* BLOCO TEXTO */
 
-.animar{
-opacity:0;
-transform:translateY(40px);
-transition:0.8s;
-}
-
-.animar.mostrar{
-opacity:1;
-transform:translateY(0);
+.bloco{
+text-align:center;
+padding:40px;
+background:white;
 }
 
 
@@ -110,23 +91,11 @@ padding:40px;
 background:white;
 }
 
-.cards{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-}
-
-.card{
-background:white;
+.salas img{
+width:220px;
+margin:10px;
 border-radius:10px;
 box-shadow:0 0 10px gray;
-margin:15px;
-padding:10px;
-}
-
-.card img{
-width:220px;
-border-radius:10px;
 }
 
 
@@ -147,9 +116,10 @@ border-radius:10px;
 /* CONTATO */
 
 .contato{
-background:white;
+background:#7a0000;
+color:white;
+padding:30px;
 text-align:center;
-padding:40px;
 }
 
 
@@ -203,53 +173,82 @@ width:60px;
 
 
 
-<div class="banner">
+<div class="topo">
 
-<div>
 <h1>Espaço Mosaico</h1>
+
 <p>Salas para aulas, reuniões e cozinha profissional</p>
-</div>
 
 </div>
+
 
 
 <div class="separador"></div>
 
 
 
-<div id="salas" class="salas animar">
+<div class="bloco">
+
+<h2>O que oferecemos</h2>
+
+<p>
+Salas para cursos presenciais<br>
+Espaço para reuniões<br>
+Cozinha profissional<br>
+Workshops e eventos educacionais<br>
+Gravação de aulas e conteúdos<br>
+Encontros profissionais
+</p>
+
+</div>
+
+
+
+<div class="separador"></div>
+
+
+
+<div id="salas" class="salas">
 
 <h2>Salas</h2>
+
 <p>Capacidade para até 15 pessoas</p>
 
-<div class="cards">
-
-<div class="card">
 <img src="sala1.jpg">
-</div>
-
-<div class="card">
 <img src="sala2.jpg">
-</div>
-
-<div class="card">
 <img src="sala3.jpg">
-</div>
-
-<div class="card">
 <img src="sala4.jpeg">
-</div>
 
 </div>
 
-</div>
 
 
 <div class="separador"></div>
 
 
 
-<div id="localizacao" class="local animar">
+<div class="bloco">
+
+<h2>Diferenciais</h2>
+
+<p>
+Localização em Copacabana<br>
+Ambiente profissional<br>
+Espaço preparado para cursos<br>
+Cozinha equipada<br>
+Fácil acesso<br>
+Estrutura confortável
+</p>
+
+</div>
+
+
+
+<div class="separador"></div>
+
+
+
+<div id="localizacao" class="local">
 
 <h2>Localização</h2>
 
@@ -267,11 +266,27 @@ style="border:0;">
 </div>
 
 
+
 <div class="separador"></div>
 
 
 
-<div id="contato" class="contato animar">
+<div class="bloco">
+
+<h2>Como reservar</h2>
+
+<p>
+1. Entre em contato pelo WhatsApp<br>
+2. Informe data e horário<br>
+3. Enviamos valores e disponibilidade<br>
+4. Confirme sua reserva
+</p>
+
+</div>
+
+
+
+<div id="contato" class="contato">
 
 <h2>Contato</h2>
 
@@ -304,30 +319,6 @@ Instagram: @mosaicopacabana
 </a>
 
 </div>
-
-
-
-<script>
-
-function animarScroll(){
-
-let elementos = document.querySelectorAll(".animar");
-
-let topo = window.scrollY + window.innerHeight - 100;
-
-elementos.forEach(el => {
-
-if(topo > el.offsetTop){
-el.classList.add("mostrar");
-}
-
-});
-
-}
-
-window.addEventListener("scroll", animarScroll);
-
-</script>
 
 
 </body>
