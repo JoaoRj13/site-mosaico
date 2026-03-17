@@ -88,6 +88,20 @@ margin:40px 0;
 }
 
 
+/* ANIMAÇÃO */
+
+.animar{
+opacity:0;
+transform:translateY(40px);
+transition:0.8s;
+}
+
+.animar.mostrar{
+opacity:1;
+transform:translateY(0);
+}
+
+
 /* SALAS */
 
 .salas{
@@ -203,7 +217,7 @@ width:60px;
 
 
 
-<div id="salas" class="salas">
+<div id="salas" class="salas animar">
 
 <h2>Salas</h2>
 <p>Capacidade para até 15 pessoas</p>
@@ -235,7 +249,7 @@ width:60px;
 
 
 
-<div id="localizacao" class="local">
+<div id="localizacao" class="local animar">
 
 <h2>Localização</h2>
 
@@ -257,7 +271,7 @@ style="border:0;">
 
 
 
-<div id="contato" class="contato">
+<div id="contato" class="contato animar">
 
 <h2>Contato</h2>
 
@@ -290,6 +304,30 @@ Instagram: @mosaicopacabana
 </a>
 
 </div>
+
+
+
+<script>
+
+function animarScroll(){
+
+let elementos = document.querySelectorAll(".animar");
+
+let topo = window.scrollY + window.innerHeight - 100;
+
+elementos.forEach(el => {
+
+if(topo > el.offsetTop){
+el.classList.add("mostrar");
+}
+
+});
+
+}
+
+window.addEventListener("scroll", animarScroll);
+
+</script>
 
 
 </body>
