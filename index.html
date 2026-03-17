@@ -6,9 +6,12 @@
 <title>Mosaico</title>
 
 <link rel="icon" type="image/png" href="icon.png">
-<link rel="shortcut icon" href="icon.png">
 
 <style>
+
+html{
+scroll-behavior:smooth;
+}
 
 body{
 margin:0;
@@ -17,7 +20,7 @@ background:#f5f5f5;
 }
 
 
-/* ===== MENU ===== */
+/* MENU */
 
 .menu{
 position:fixed;
@@ -45,50 +48,47 @@ color:white;
 margin:20px;
 text-decoration:none;
 font-size:18px;
+padding:5px;
+transition:0.3s;
+}
+
+.menu-links a:hover{
+border-bottom:2px solid white;
 }
 
 
-/* ===== BANNER ===== */
+/* BANNER */
 
 .banner{
 margin-top:80px;
-height:400px;
-background:url("sala3.jpg");
-background-size:cover;
-background-position:center;
+height:350px;
+background:#7a0000;
 display:flex;
 align-items:center;
 justify-content:center;
-position:relative;
-}
-
-.banner::after{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.4);
-}
-
-.banner-text{
-position:relative;
 color:white;
 text-align:center;
 }
 
-.banner-text h1{
+.banner h1{
 font-size:40px;
-margin:0;
 }
 
-.banner-text p{
-font-size:20px;
+.banner p{
+font-size:18px;
 }
 
 
-/* ===== SALAS ===== */
+/* SEPARADOR */
+
+.separador{
+height:2px;
+background:#ddd;
+margin:40px 0;
+}
+
+
+/* SALAS */
 
 .salas{
 text-align:center;
@@ -96,15 +96,27 @@ padding:40px;
 background:white;
 }
 
-.salas img{
-width:220px;
-margin:10px;
+.cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.card{
+background:white;
 border-radius:10px;
 box-shadow:0 0 10px gray;
+margin:15px;
+padding:10px;
+}
+
+.card img{
+width:220px;
+border-radius:10px;
 }
 
 
-/* ===== LOCAL ===== */
+/* LOCAL */
 
 .local{
 text-align:center;
@@ -118,17 +130,27 @@ border-radius:10px;
 }
 
 
-/* ===== CONTATO ===== */
+/* CONTATO */
 
 .contato{
-background:#7a0000;
-color:white;
-padding:30px;
+background:white;
 text-align:center;
+padding:40px;
 }
 
 
-/* ===== BOTOES ===== */
+/* RODAPE */
+
+.rodape{
+background:#7a0000;
+color:white;
+text-align:center;
+padding:20px;
+font-size:14px;
+}
+
+
+/* BOTOES */
 
 .botoes{
 position:fixed;
@@ -156,7 +178,7 @@ width:60px;
 </div>
 
 <div class="menu-links">
-<a href="index.html">Home</a>
+<a href="#">Home</a>
 <a href="quem-somos.html">Quem somos</a>
 <a href="#salas">Salas</a>
 <a href="#localizacao">Localização</a>
@@ -169,30 +191,47 @@ width:60px;
 
 <div class="banner">
 
-<div class="banner-text">
-
+<div>
 <h1>Espaço Mosaico</h1>
-
 <p>Salas para aulas, reuniões e cozinha profissional</p>
-
 </div>
 
 </div>
+
+
+<div class="separador"></div>
 
 
 
 <div id="salas" class="salas">
 
 <h2>Salas</h2>
-
 <p>Capacidade para até 15 pessoas</p>
 
+<div class="cards">
+
+<div class="card">
 <img src="sala1.jpg">
+</div>
+
+<div class="card">
 <img src="sala2.jpg">
+</div>
+
+<div class="card">
 <img src="sala3.jpg">
+</div>
+
+<div class="card">
 <img src="sala4.jpeg">
+</div>
 
 </div>
+
+</div>
+
+
+<div class="separador"></div>
 
 
 
@@ -214,6 +253,9 @@ style="border:0;">
 </div>
 
 
+<div class="separador"></div>
+
+
 
 <div id="contato" class="contato">
 
@@ -222,6 +264,16 @@ style="border:0;">
 Avenida Nossa Senhora de Copacabana 690  
 <br>
 (21) 99678-4717
+
+</div>
+
+
+
+<div class="rodape">
+
+Espaço Mosaico • Copacabana • Rio de Janeiro  
+<br>
+Instagram: @mosaicopacabana
 
 </div>
 
